@@ -13,4 +13,6 @@ To run this application:
 2.java -jar OntologyMatcher.jar path/to/input/directory path/to/ontology/file
 
 ##### note 
-The ontology file must be generated from  the project specified above.
+This application can be fully fuctional only with the ontology file mentioned above , or with one tha has the same 
+
+class and property structure.

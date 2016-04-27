@@ -373,7 +373,6 @@ public class Ontology {
                     }
                     else{
                         locationIndividual = createLocationIndividual(filepath);
-                        //locations.put(filepath, locationIndividual.getLocalName());
                     }
                     model.add(fileIndividual,hasLocation,locationIndividual);
                     model.add(locationIndividual,relatedFile,fileIndividual);
@@ -477,7 +476,6 @@ public class Ontology {
             if(relatedThings.isEmpty()){
                 Individual thingIndividual = createThingIndividual(concept);
                 relatedThings.add(thingIndividual);
-                //things.put(concept,thingIndividual.getLocalName());
                 addOldThingRelations(concept,thingIndividual);
             }
             ArrayList<String> files = (ArrayList<String>)pair.getValue();
@@ -490,7 +488,6 @@ public class Ontology {
                         fileIndividual = model.getIndividual(ns+newFiles.get(file));
                     }
                     else{
-                       //fileIndividual = createFileIndividual();
                         String filename = indexer.getFileMeta().get(file).getFileName();
                         fileIndividual = createFileIndividual(filename,new FileAttributes(new File(file)));
                         newFiles.put(file, fileIndividual.getLocalName());
@@ -502,7 +499,6 @@ public class Ontology {
                     }
                     else{
                         locationIndividual = createLocationIndividual(filepath);
-                        //locations.put(filepath, locationIndividual.getLocalName());
                     }
                     model.add(fileIndividual,hasLocation,locationIndividual);
                     model.add(locationIndividual,relatedFile,fileIndividual);
